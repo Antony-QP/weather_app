@@ -7,6 +7,8 @@ class UI {
     this.feelsLike = document.getElementById('feels-like');
   }
 
+
+
   paint(weather) {
 
 
