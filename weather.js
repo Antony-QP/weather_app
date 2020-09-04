@@ -1,17 +1,22 @@
 class Weather {
-  constructor(long, lang) {
+  constructor(city) {
     this.apiKey = 'b296d0e86384886403f861b58ae58d98';
-    this.longitude = longitude;
-    this.latitude = latitude;
+    this.city = city
   }
 
   // Fetch weather from the API 
 
   async getWeather() {
-    const response = await fetch(`api.openweathermap.org/data/2.5/weather?lat=${this.latitude}&lon=${this.longitude}&appid=${this.apiKey}`)
+    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.apiKey}`)
 
-    const responseData = await response;
+    const responseData = await response
 
-    return responseData
+    return responseData.json();
+  }
+
+  // Change weather location
+
+  changeLocation(city) {
+    this.city = city
   }
 }

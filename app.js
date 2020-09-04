@@ -1,15 +1,13 @@
-let geolocation = null;
+// Initialize weather object
+const weather = new Weather('london');
 
+// Get weather on DOM load
+document.addEventListener('DOMContentLoaded', getWeather);
 
-if (window.navigator && window.navigator.geolocation) {
-  geolocation = window.navigator.geolocation;
-}
-
-if (geolocation) {
-  geolocation.getCurrentPosition(function (position) {
-    let longitude = position.coords.longitude;
-    latitude = position.coords.latitude;
-    // console.log(longitude);
-    // console.log(latitude);
-  });
+function getWeather() {
+  weather.getWeather()
+    .then(results => {
+      console.log(results);
+    })
+    .catch(err => console.log(err));
 }
