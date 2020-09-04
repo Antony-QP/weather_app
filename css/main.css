@@ -1,0 +1,31 @@
+/* Main styling */
+.app-face {
+  width: 500px;
+  height: 500px;
+  border: 20px solid green;
+  display: block;
+  margin-top: 125px;
+  padding: 40px;
+}
+
+.container {
+  text-align: center;
+}
+
+.face-content {
+  /* margin-top: 10px; */
+}
+
+.data-row {
+  height: 100px;
+  text-align: center;
+}
+
+#location {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  margin-top: 20px;
+}
