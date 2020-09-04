@@ -12,7 +12,7 @@ class UI {
 
     this.location.textContent = weather.name
     this.temp.textContent = JSON.stringify(weather.main.temp) + " Degrees Celcius"
-    this.description.textContent = JSON.stringify(weather.weather[0].description)
+    this.description.textContent = weather.weather[0].description.toUpperCase()
     this.feelsLike.textContent = weather.main.feels_like + " Degrees Celcius"
   }
 }
